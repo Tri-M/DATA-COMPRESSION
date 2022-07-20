@@ -29,8 +29,8 @@ while freq:
     chars.remove(chars[c])
     freq.remove(maxi)
 print("Table after sorting :")
-print(new)   #sorted freq
-print(chars1)   #chars after sort
+print(new)   
+print(chars1)  
 
 leaves = 0
 for x in new:
@@ -39,8 +39,8 @@ for x in new:
 nodes = 2*leaves-1
 
 
-print("Number of nodes in the tree: ",nodes)
-print("Number of leafs in the tree: ",leaves)
+print("Number of nodes in the tree : ",nodes)
+print("Number of leafs in the tree : ",leaves)
 
 
 encoding=["null"]*leaves
@@ -49,8 +49,8 @@ print(encoding)
 btree=list(new)
 stringtree=list(chars1)
 
-print("Binary tree ",btree)
-print("String tree ",stringtree)
+print("Binary tree :",btree)
+print("String tree :",stringtree)
 
 
 
@@ -64,8 +64,8 @@ for j in range(len(btree)-1,-1,-1):
             right=btree[k]
             rightstrings=stringtree[k]
             m=k
-    print("Right",right)
-    print("Right string tree ",rightstrings)
+    print("Right :",right)
+    print("Right string tree :",rightstrings)
             
     for r in rightstrings:
         charInd=chars1.index(r)
@@ -94,7 +94,7 @@ for j in range(len(btree)-1,-1,-1):
                 encoding[charInd]="1"+encoding[charInd]
 
 
-        #print leftstr
+        
         w = stringtree.index(leftstrings)
         stringtree.pop(w)
         btree.pop(w)
@@ -105,12 +105,12 @@ for j in range(len(btree)-1,-1,-1):
         btree.insert(0,sum_)
 
 
-        print ("value table",btree)
-        print ("String list ",stringtree)
+        print ("value table : ",btree)
+        print ("String list : ",stringtree)
         print("encoding : ",encoding)
         if len(btree)==1:
             break
-    print ("char",chars1)
+    print ("char : ",chars1)
     f.close()
     chars = ""
     for i in s:
@@ -131,7 +131,7 @@ for j in range(len(btree)-1,-1,-1):
         chars = encoding[i]
         w=length+"="+chars
         print (w)
-        p.write(w+"\n")
+        p.write(w +"\n")
         w = ""
     p.close()
   
