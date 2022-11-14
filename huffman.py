@@ -40,7 +40,7 @@ nodes = 2*leaves-1
 
 
 print("Number of nodes in the tree : ",nodes)
-print("Number of leafs in the tree : ",leaves)
+print("Number of leaves in the tree : ",leaves)
 
 
 encoding=["null"]*leaves
